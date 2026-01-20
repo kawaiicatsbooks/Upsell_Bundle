@@ -5,26 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Special Offer - Kawaii Cats</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '881462601137955');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=881462601137955&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-     <style>
+    <style>
         :root {
             /* Colores exactos proporcionados */
             --bg-color: #fff6ec;
@@ -207,6 +188,34 @@ src="https://www.facebook.com/tr?id=881462601137955&ev=PageView&noscript=1"
         }
     }
     </style>
+    
+    
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '881462601137955');
+fbq('track', 'PageView');
+    
+    
+    fbq('track', 'ViewContent',{ 
+            content_name: 'Pagina_Upsell_little_profession_+_10_exclusives_pages; 
+            content_category: 'Upsell' 
+    });
+    
+</script>
+<noscript> <img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=881462601137955&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+    
+    
 </head>
 <body>
 
@@ -294,11 +303,21 @@ src="https://www.facebook.com/tr?id=881462601137955&ev=PageView&noscript=1"
                 <strong>⏳ One-Time Opportunity</strong>
                 <p style="margin: 5px 0;">This special bundle is available <strong>only now</strong>, right after your purchase. Once you leave this page, this offer will <strong>no longer be available</strong>.</p>
             </div>
-
+            <!-- /*(Hotmart CTA Button will appear here)*/ -->
             <div class="cta-container">
-                <div style="font-style: italic; color: #888;">(Hotmart CTA Button will appear here)</div>
+                
+                <!-- HOTMART - Sales Funnel Widget -->
+                <!--- sales funnel container --->
+                <div id="hotmart-sales-funnel"></div>
+                <!--- script load and   setup --->
+                <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+                <script>
+                    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+                </script>
+                <!-- HOTMART - Sales Funnel Widget -->
             </div>
 
+            
             <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
                 <p>Keep enjoying your original purchase</p>
                 <p style="font-size: 14px; color: #666;">If you choose not to upgrade, no worries — you can continue enjoying your original book anytime.</p>
@@ -309,5 +328,4 @@ src="https://www.facebook.com/tr?id=881462601137955&ev=PageView&noscript=1"
     </div>
 
 </body>
-
 </html>
