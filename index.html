@@ -1,331 +1,372 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Offer - Kawaii Cats</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            /* Colores exactos proporcionados */
-            --bg-color: #fff6ec;
-            --primary-orange: #f4a261;
-            --dark-text: #4a4a4a;
-            --gray-box: #4a4a4a;
-            --white: #ffffff;
-            --accent-green: #7fb685; /* Color para los checks */
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Special Offer - Kawaii Cats</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+            rel="stylesheet" />
+        <style>
+            :root {
+                /* Colores exactos proporcionados */
+                --bg-color: #fff6ec;
+                --primary-orange: #f4a261;
+                --dark-text: #4a4a4a;
+                --gray-box: #4a4a4a;
+                --white: #ffffff;
+                --accent-green: #7fb685; /* Color para los checks */
+            }
 
-        body {
-            font-family: 'Quicksand', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--dark-text);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+            body {
+                font-family: "Quicksand", sans-serif;
+                background-color: var(--bg-color);
+                color: var(--dark-text);
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
 
-        .gridimages {
-            display: flex;
-            gap: 8px;
-        }
-        
-        .column {
-            flex: 1;
-        }
-        
-        .container {
-            max-width: 750px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center;
-        }
+            .gridimages {
+                display: flex;
+                gap: 8px;
+            }
 
-        /* Encabezado de agradecimiento */
-        .thank-you-note {
-            margin-bottom: 40px;
-        }
-        .thank-you-note h1 { 
-            color: var(--primary-orange); 
-            font-size: 28px; 
-            margin-bottom: 10px;
-        }
-        .thank-you-note p { font-size: 18px; margin: 5px 0; }
+            .column {
+                flex: 1;
+            }
 
-        /* Tarjeta Principal de Upsell */
-        .upsell-card {
-            background-color: var(--white);
-            border-radius: 30px;
-            padding: 40px;
-            box-shadow: 0 10px 25px rgba(74, 74, 74, 0.05);
-            border: 1px solid #f0e6d6;
-        }
+            .container {
+                max-width: 750px;
+                margin: 0 auto;
+                padding: 40px 20px;
+                text-align: center;
+            }
 
-        /* Estilo para imágenes */
-        .product-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 20px;
-            margin: 20px 0;
-        }
+            /* Encabezado de agradecimiento */
+            .thank-you-note {
+                margin-bottom: 40px;
+            }
+            .thank-you-note h1 {
+                color: var(--primary-orange);
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+            .thank-you-note p {
+                font-size: 18px;
+                margin: 5px 0;
+            }
 
-        h2 { font-size: 32px; color: var(--dark-text); margin-bottom: 5px; }
-        .bundle-title { 
-            font-size: 24px; 
-            color: var(--primary-orange); 
-            font-weight: 700; 
-            margin-bottom: 20px; 
-        }
+            /* Tarjeta Principal de Upsell */
+            .upsell-card {
+                background-color: var(--white);
+                border-radius: 30px;
+                padding: 40px;
+                box-shadow: 0 10px 25px rgba(74, 74, 74, 0.05);
+                border: 1px solid #f0e6d6;
+            }
 
-        /* Sección de contenidos */
-        .content-box {
-            text-align: left;
-            background: #fffbf7;
-            padding: 30px;
-            border-radius: 20px;
-            margin: 30px 0;
-        }
+            /* Estilo para imágenes */
+            .product-image {
+                max-width: 100%;
+                height: auto;
+                border-radius: 20px;
+                margin: 20px 0;
+            }
 
-        .item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
+            h2 {
+                font-size: 32px;
+                color: var(--dark-text);
+                margin-bottom: 5px;
+            }
+            .bundle-title {
+                font-size: 24px;
+                color: var(--primary-orange);
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
 
-        .item span {
-            color: var(--accent-green);
-            margin-right: 15px;
-            font-size: 22px;
-            font-weight: bold;
-        }
+            /* Sección de contenidos */
+            .content-box {
+                text-align: left;
+                background: #fffbf7;
+                padding: 30px;
+                border-radius: 20px;
+                margin: 30px 0;
+            }
 
-        .perfect-for {
-            text-align: left;
-            margin: 30px 0;
-            padding: 0 10px;
-        }
+            .item {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
 
-        /* Urgencia */
-        .urgency {
-            background-color: #fff0f0;
-            border: 2px dashed #f4a261;
-            padding: 20px;
-            border-radius: 41px;
-            margin: 30px 0;
-        }
-        .urgency strong { color: #d64545; }
+            .item span {
+                color: var(--accent-green);
+                margin-right: 15px;
+                font-size: 22px;
+                font-weight: bold;
+            }
 
-        /* Contenedor de Botones Hotmart */
-        .cta-container {
-            margin: 40px 0;
-        }
+            .perfect-for {
+                text-align: left;
+                margin: 30px 0;
+                padding: 0 10px;
+            }
 
-        .no-thanks {
-            display: inline-block;
-            margin-top: 20px;
-            color: #888;
-            text-decoration: underline;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-        .no-thanks:hover { color: var(--dark-text); }
+            /* Urgencia */
+            .urgency {
+                background-color: #fff0f0;
+                border: 2px dashed #f4a261;
+                padding: 20px;
+                border-radius: 41px;
+                margin: 30px 0;
+            }
+            .urgency strong {
+                color: #d64545;
+            }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            .upsell-card { padding: 25px; }
-            h2 { font-size: 26px; }
-        }
-        
-        
-        .gallery-section {
-        margin: 30px 0;
-    }
-    
-    .gallery-title {
-        font-size: 20px;
-        color: var(--primary-orange);
-        margin-bottom: 15px;
-        font-weight: 700;
-    }
+            /* Contenedor de Botones Hotmart */
+            .cta-container {
+                margin: 40px 0;
+            }
 
-    .photo-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
-        padding: 10px;
-    }
+            .no-thanks {
+                display: inline-block;
+                margin-top: 20px;
+                color: #888;
+                text-decoration: underline;
+                font-size: 14px;
+                transition: color 0.3s;
+            }
+            .no-thanks:hover {
+                color: var(--dark-text);
+            }
 
-    .gallery-item {
-        background-color: var(--white);
-        border-radius: 20px;
-        border: 2px solid #f0e6d6;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-        /* Proporción cuadrada para las miniaturas */
-        aspect-ratio: 1 / 1.3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+            /* Responsive */
+            @media (max-width: 600px) {
+                .upsell-card {
+                    padding: 25px;
+                }
+                h2 {
+                    font-size: 26px;
+                }
+            }
 
-    .gallery-item:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 15px rgba(244, 162, 97, 0.2);
-        border-color: var(--primary-orange);
-    }
+            .gallery-section {
+                margin: 30px 0;
+            }
 
-    .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ajusta la imagen para llenar el recuadro */
-        display: block;
-    }
+            .gallery-title {
+                font-size: 20px;
+                color: var(--primary-orange);
+                margin-bottom: 15px;
+                font-weight: 700;
+            }
 
-    @media (max-width: 480px) {
-        .photo-grid {
-            grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles pequeños */
-        }
-    }
-    </style>
-    
-    
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '881462601137955');
-fbq('track', 'PageView');
-    
-    
-    fbq('track', 'ViewContent',{ 
-            content_name: 'Kawaii Cats Little Professions Bundle', 
-            content_category: 'Upsell' 
-    });
-    
-</script>
-<noscript> <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=881462601137955&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    
-    
-</head>
-<body>
+            .photo-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+                padding: 10px;
+            }
 
-    <div class="container">
-        <div class="thank-you-note">
-            <h1>Thank you for your purchase! </h1>
-            <p>You’ve just taken a beautiful step toward creativity, calm moments, and joyful coloring.</p>
-            <p>Before you go, we’d love to offer you something <strong>very special</strong> that perfectly complements what you just bought 💛</p>
-        </div>
+            .gallery-item {
+                background-color: var(--white);
+                border-radius: 20px;
+                border: 2px solid #f0e6d6;
+                overflow: hidden;
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+                cursor: pointer;
+                /* Proporción cuadrada para las miniaturas */
+                aspect-ratio: 1 / 1.3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
-        <div class="upsell-card">
-            
-            <span>Upgrade Your Coloring Experience </span>
-            <h2>Kawaii Cats – Little Professions</h2>
-            <div class="bundle-title">+ Exclusive Premium Pages</div>
-            <div class="photo-grid">
-                <div class="gallery-item"> <img src="Images/little_professions.jpg" alt="Kawaii Cats Bundle" class="product-image"></div>
-                <div class="gallery-item"> <img src="Images/Bonus_collection.jpg" alt="Kawaii Cats Bundle" class="product-image"></div>
+            .gallery-item:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 15px rgba(244, 162, 97, 0.2);
+                border-color: var(--primary-orange);
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ajusta la imagen para llenar el recuadro */
+                display: block;
+            }
+
+            @media (max-width: 480px) {
+                .photo-grid {
+                    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles pequeños */
+                }
+            }
+        </style>
+
+        <!-- Meta Pixel Code -->
+        <script>
+            !(function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = "2.0";
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s);
+            })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+            fbq("init", "881462601137955");
+            fbq("track", "PageView");
+
+            fbq("track", "ViewContent", {
+                content_name: "Kawaii Cats Little Professions Bundle",
+                content_category: "Upsell"
+            });
+        </script>
+
+        <noscript>
+            <img
+                height="1"
+                width="1"
+                style="display: none"
+                src="https://www.facebook.com/tr?id=881462601137955&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="thank-you-note">
+                <h1>Thank you for your purchase!</h1>
+                <p>You’ve just taken a beautiful step toward creativity, calm moments, and joyful coloring.</p>
+                <p>
+                    Before you go, we’d love to offer you something <strong>very special</strong> that perfectly
+                    complements what you just bought 💛
+                </p>
             </div>
 
-            <p>This exclusive bundle is designed to bring <strong>more creativity, learning, and relaxation</strong> into your coloring time — for kids and adults alike.</p>
-
-            <div class="content-box">
-                <h3 style="margin-top: 0;">📘 What’s included in this bundle:</h3>
-                
-                <div class="item">
-                    <span>✔</span>
-                    <div><strong>Kawaii Cats – Little Professions:</strong> 50 adorable kawaii cat illustrations, each representing a different profession. Kids can explore jobs like doctor, chef, artist, police officer, firefighter, teacher, astronaut, and more through clear, playful scenes.</div>
+            <div class="upsell-card">
+                <span>Upgrade Your Coloring Experience </span>
+                <h2>Kawaii Cats – Little Professions</h2>
+                <div class="bundle-title">+ Exclusive Premium Pages</div>
+                <div class="photo-grid">
+                    <div class="gallery-item">
+                        <img src="Images/little_professions.jpg" alt="Kawaii Cats Bundle" class="product-image" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Images/Bonus_collection.jpg" alt="Kawaii Cats Bundle" class="product-image" />
+                    </div>
                 </div>
 
-                <div class="item">
-                    <span>✔</span>
-                    <div><strong>Exclusive Premium Pages:</strong> 10 special kawaii cat illustrations created for relaxation, calm moments, and creative enjoyment. These pages are <strong>not included in any other book</strong>.</div>
+                <p>
+                    This exclusive bundle is designed to bring
+                    <strong>more creativity, learning, and relaxation</strong> into your coloring time — for kids and
+                    adults alike.
+                </p>
+
+                <div class="content-box">
+                    <h3 style="margin-top: 0">📘 What’s included in this bundle:</h3>
+
+                    <div class="item">
+                        <span>✔</span>
+                        <div>
+                            <strong>Kawaii Cats – Little Professions:</strong> 50 adorable kawaii cat illustrations,
+                            each representing a different profession. Kids can explore jobs like doctor, chef, artist,
+                            police officer, firefighter, teacher, astronaut, and more through clear, playful scenes.
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span>✔</span>
+                        <div>
+                            <strong>Exclusive Premium Pages:</strong> 10 special kawaii cat illustrations created for
+                            relaxation, calm moments, and creative enjoyment. These pages are
+                            <strong>not included in any other book</strong>.
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span>✔</span>
+                        <div>One illustration per page (marker-friendly)</div>
+                    </div>
+                    <div class="item">
+                        <span>✔</span>
+                        <div>Clean, bold black-and-white designs</div>
+                    </div>
+                    <div class="item">
+                        <span>✔</span>
+                        <div>Printable & compatible with coloring apps</div>
+                    </div>
+                    <div class="item">
+                        <span>✔</span>
+                        <div>Instant digital access (PDF)</div>
+                    </div>
+                </div>
+                <div class="perfect-for">
+                    <strong>💛 Perfect for:</strong>
+                    <ul style="margin-top: 10px">
+                        <li>Kids who love cats and creative play</li>
+                        <li>Parents looking for screen-free activities</li>
+                        <li>Educators and homeschooling families</li>
+                        <li>Adults who want to relax, unwind, and reduce stress</li>
+                    </ul>
                 </div>
 
-                <div class="item">
-                    <span>✔</span>
-                    <div>One illustration per page (marker-friendly)</div>
+                <div class="gallery-section">
+                    <p class="gallery-title">✨ A Sneak Peek Inside the Bundle</p>
+                    <div class="photo-grid">
+                        <div class="gallery-item">
+                            <img src="Images/slide_1.jpg" alt="coloring cat mermaid" />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="Images/slide_3.jpg" alt="Kawaii Cat professional" />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="Images/slide_2.jpg" alt="Kawaii Cat ballerina" />
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Images/slide_4.jpg" alt="Kawaii Cat vet" />
+                        </div>
+                    </div>
                 </div>
-                <div class="item">
-                    <span>✔</span>
-                    <div>Clean, bold black-and-white designs</div>
+
+                <div class="urgency">
+                    <strong>⏳ One-Time Opportunity</strong>
+                    <p style="margin: 5px 0">
+                        This special bundle is available <strong>only now</strong>, right after your purchase. Once you
+                        leave this page, this offer will <strong>no longer be available</strong>.
+                    </p>
                 </div>
-                <div class="item">
-                    <span>✔</span>
-                    <div>Printable & compatible with coloring apps</div>
-                </div>
-                <div class="item">
-                    <span>✔</span>
-                    <div>Instant digital access (PDF)</div>
-                </div>
-            </div>
-            <div class="perfect-for">
-                <strong>💛 Perfect for:</strong>
-                <ul style="margin-top: 10px;">
-                <li>Kids who love cats and creative play</li>
-                <li>Parents looking for screen-free activities</li>
-                <li>Educators and homeschooling families</li>
-                <li>Adults who want to relax, unwind, and reduce stress</li>
-                </ul>
-            </div>
-            
-            <div class="gallery-section">
-    <p class="gallery-title">✨ A Sneak Peek Inside the Bundle</p>
-    <div class="photo-grid">
-        <div class="gallery-item">
-            <img src="Images/slide_1.jpg" alt="coloring cat mermaid">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="Images/slide_3.jpg" alt="Kawaii Cat professional">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="Images/slide_2.jpg" alt="Kawaii Cat ballerina">
-        </div>
-        <div class="gallery-item">
-            <img src="Images/slide_4.jpg" alt="Kawaii Cat vet">
-        </div>
-    </div>
-</div>
-            
-            
-            <div class="urgency">
-                <strong>⏳ One-Time Opportunity</strong>
-                <p style="margin: 5px 0;">This special bundle is available <strong>only now</strong>, right after your purchase. Once you leave this page, this offer will <strong>no longer be available</strong>.</p>
-            </div>
-            <!-- /*(Hotmart CTA Button will appear here)*/ -->
-            <div class="cta-container">
-                
+                <!-- /*(Hotmart CTA Button will appear here)*/ -->
+
                 <!-- HOTMART - Sales Funnel Widget -->
                 <!--- sales funnel container --->
                 <div id="hotmart-sales-funnel"></div>
                 <!--- script load and   setup --->
                 <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
                 <script>
-                    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+                    checkoutElements.init("salesFunnel").mount("#hotmart-sales-funnel");
                 </script>
                 <!-- HOTMART - Sales Funnel Widget -->
-            </div>
 
-            
-            <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
-                <p>Keep enjoying your original purchase</p>
-                <p style="font-size: 14px; color: #666;">If you choose not to upgrade, no worries — you can continue enjoying your original book anytime.</p>
-                
-                <a href="#" class="no-thanks">No, thank you. Take me to my purchase.</a>
+                <div>
+                    <p>Keep enjoying your original purchase</p>
+                    <p style="font-size: 14px; color: #666">
+                        If you choose not to upgrade, no worries — you can continue enjoying your original book anytime.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-
-</body>
+    </body>
 </html>
